@@ -73,6 +73,7 @@ fn scan(tx: Sender<u16>, start_port: u16, addr: IpAddr, num_threads: u16){
 fn main() {
     let args: Vec<String> = env::args().collect();
     let program = args[0].clone();
+    println!("{:?}",&args);
     let arguments = Arguments::new(&args).unwrap_or_else(|err| {
         if err.contains("help") {
             process::exit(0);
